@@ -1,0 +1,18 @@
+to build an image 
+    docker build -t simple-python-app:v3.0.0 .
+make a container 
+docker run -d -p 7000:5000 --name flask-container simple-python-app:v3.0.0 
+    80a48da8a22d563d8a3e6368a708dd168bed3e31c09d021f693872996999e037
+to list a container 
+docker container ls
+    CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                                                                                                                                  NAMES
+    80a48da8a22d   simple-python-app:v3.0.0   "python app.py"          25 seconds ago   Up 24 seconds   0.0.0.0:7000->5000/tcp, [::]:7000->5000/tcp                                                                                            flask-container
+to log a container 
+docker logs 80a4 -f
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+
+
