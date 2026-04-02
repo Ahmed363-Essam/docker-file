@@ -1,0 +1,6 @@
+docker exec -it f678 bash
+
+apt-get update
+apt-get install -y iputils-ping
+
+ping db
